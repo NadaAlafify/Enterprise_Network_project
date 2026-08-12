@@ -1,4 +1,4 @@
-# Enterprise Network Project 
+# Enterprise Network Project
 
 Enterprise network design using **VLANs, VTP, STP, Multilayer Switching, HSRP, DHCP, and OSPF**, built with two Core Multilayer Switches and two Edge Routers connected to an ISP.
 
