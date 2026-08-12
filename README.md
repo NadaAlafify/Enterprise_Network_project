@@ -331,4 +331,4 @@ conf t
 
 ## Credit
 
-The lab design and commands were taught by Eng. Mohamed Kamel as part of the CCNP course. This repository documents my hands-on practice implementing and configuring the topology myself.
+The lab design and commands were taught by Eng. Mohamed Kamel as part of the CCNA course. This repository documents my hands-on practice implementing and configuring the topology myself.
