@@ -1,8 +1,8 @@
-# 🌐 Enterprise Network Project – Cisco Packet Tracer
+# Enterprise Network Project 
 
-Enterprise network design using **VLANs, VTP, STP, Multilayer Switching, HSRP, DHCP, and OSPF**, built with two Core Multilayer Switches (MLS) and two Edge Routers connected to an ISP.
+Enterprise network design using **VLANs, VTP, STP, Multilayer Switching, HSRP, DHCP, and OSPF**, built with two Core Multilayer Switches and two Edge Routers connected to an ISP.
 
-## 📋 Project Overview
+## Project Overview
 
 | Feature | Description |
 |---|---|
@@ -14,7 +14,7 @@ Enterprise network design using **VLANs, VTP, STP, Multilayer Switching, HSRP, D
 | DHCP | Automatic IP assignment per VLAN |
 | Edge Routers | Dual-homed internet connectivity via OSPF |
 
-## 🗂️ Configuration Steps
+## Configuration Steps
 
 1. Configure Trunk Links
 2. Enable VTP & Create VLANs
@@ -31,7 +31,7 @@ Enterprise network design using **VLANs, VTP, STP, Multilayer Switching, HSRP, D
 
 ---
 
-## 1️⃣ MLS Trunk Config
+## 1️) MLS Trunk Config
 
 ```
 en
@@ -41,7 +41,7 @@ conf t
   switchport mode trunk
 ```
 
-## 2️⃣ MLS VTP & VLAN Config
+## 2️) MLS VTP & VLAN Config
 
 ```
 en
@@ -55,7 +55,7 @@ conf t
   name MRK
 ```
 
-## 3️⃣ Access Switches – VLAN Port Assignment
+## 3️) Access Switches – VLAN Port Assignment
 
 ```
 en
@@ -68,7 +68,7 @@ conf t
   switchport access vlan 4
 ```
 
-## 4️⃣ STP Config
+## 4️) STP Config
 
 **MLS1**
 ```
@@ -99,7 +99,7 @@ conf t
   spanning-tree portfast
 ```
 
-## 5️⃣ Rapid STP (All Switches)
+## 5️) Rapid STP (All Switches)
 
 ```
 en
@@ -107,7 +107,7 @@ conf t
  spanning-tree mode rapid-pvst
 ```
 
-## 6️⃣ MLS Routing
+## 6️) MLS Routing
 
 **MLS1**
 ```
@@ -149,7 +149,7 @@ conf t
   ip address 192.168.4.201 255.255.255.0
 ```
 
-## 7️⃣ MLS HSRP
+## 7️) MLS HSRP
 
 **MLS1**
 ```
@@ -197,7 +197,7 @@ conf t
   standby preempt
 ```
 
-## 8️⃣ MLS DHCP Config
+## 8️) MLS DHCP Config
 
 ```
 en
@@ -223,7 +223,7 @@ conf t
   dns-server 8.8.8.8
 ```
 
-## 9️⃣ Routed Ports for MLS
+## 9️) Routed Ports for MLS
 
 **MLS1**
 ```
@@ -255,7 +255,7 @@ conf t
   no sh
 ```
 
-## 🔟 Edge Routers Interfaces IPs
+## Edge Routers Interfaces IPs
 
 **Edge 1**
 ```
@@ -291,7 +291,7 @@ conf t
   no sh
 ```
 
-## 1️⃣1️⃣ Default Route for Edge Routers
+## 1️1) Default Route for Edge Routers
 
 **Edge 1**
 ```
@@ -307,7 +307,7 @@ conf t
  ip route 0.0.0.0 0.0.0.0 f1/0
 ```
 
-## 1️⃣2️⃣ Routing Protocol (OSPF)
+## 1️2) Routing Protocol (OSPF)
 
 **Edge Routers**
 ```
@@ -329,12 +329,3 @@ conf t
 
 ---
 
-## 🛠️ Tools Used
-- Cisco Packet Tracer
-
-## 📌 Notes
-This project was built as a hands-on practice lab to apply enterprise networking concepts including Layer 2/Layer 3 redundancy, VLAN segmentation, and dynamic routing.
-
----
-
-⭐ Feel free to fork or use this as a reference for your own CCNA/network engineering practice.
